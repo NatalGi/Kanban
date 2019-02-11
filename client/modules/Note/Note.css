@@ -1,1 +1,31 @@
 /* Note styles */
+.Note {
+	position: relative;
+  display: block;
+	padding: 15px;
+	margin-top: 10px;
+	border-radius: 3px;
+	width: 100%;
+	background-color: #ff751a;
+	cursor: -webkit-grab;
+	cursor: grab;
+	transition: background-color .3s;
+}
+
+.Note:hover {
+  background-color: #ff944d;
+}
+
+.NoteDelete button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  cursor: pointer;
+}
+
+.NoteDelete button:hover, .NoteDelete button:active {
+  color: #333333;
+}

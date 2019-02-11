@@ -1,0 +1,39 @@
+.Lanes {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+    flex-direction: row;
+  -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  -ms-flex-pack: start;
+    justify-content: flex-start;
+  -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.AddLane {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: -35px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #a6a6a6;
+    cursor: pointer;
+  
+    border: 0;
+    border-radius: 3px;
+    width: 35px;
+    height: 35px;
+    background-color: #a6a6a6;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+    transition: background-color .3s;
+  }
+  
+  .AddLane:hover {
+    background-color: #ff751a;
+  }

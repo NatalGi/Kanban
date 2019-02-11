@@ -1,1 +1,9 @@
 /* Kanban styles */
+
+.Board {
+  /*-ms-flex: 0 1 100%;
+      flex: 0 1 100%;*/
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+}

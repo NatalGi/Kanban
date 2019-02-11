@@ -42,18 +42,31 @@ export function addNote(req, res) {
 }
 
 export function deleteNote(req, res) {
+  const { laneId } = req.body;
+  if(!laneId) {
+    res.status(400).end();
+  }
+
   Note.findOne({ id: req.params.noteId }).exec((err, note) => {
     if(err) {
       res.status(500).send(err);
     }
+
     note.remove(() => {
-      res.status(200).end();
+      Lane.findOne({ id: laneId })
+      .then(lane => {
+        lane.notes.pull(note);
+        return lane.save();
+      })
+      .then(() => {
+        res.status(200).end();
+      });
     });
   });
 }
 
 export function updateNote(req, res) {
-  const { noteId, newTask } = req.body;
+  const { noteId, task: newTask } = req.body;
   if(!noteId || !newTask) {
     res.status(400).end();
   }

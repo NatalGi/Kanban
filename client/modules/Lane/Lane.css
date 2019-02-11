@@ -1,1 +1,30 @@
 /* Lane styles */
+.Lane {
+  position: relative;
+  display: block;
+  padding: 15px;
+  margin-right: 15px;
+  width: 250px;
+  border-radius: 3px;
+  background-color: #d9d9d9;
+  transition: height 2s;
+}
+
+.LaneName {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.LaneDelete button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  color: #a6a6a6;
+  cursor: pointer;
+}
+
+.LaneDelete button:hover, .LaneDelete button:active {
+  color: #333333;
+}

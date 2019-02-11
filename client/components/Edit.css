@@ -1,0 +1,13 @@
+.input {
+    border: 0;
+    border-radius: 2px;
+    padding: 2px 5px;
+}
+
+.value {
+    word-wrap: break-word;
+}
+
+.value:hover {
+    cursor: auto;
+}

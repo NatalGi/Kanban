@@ -1,30 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import Notes from '../Note/NotesContainer';
+import Edit from '../../components/Edit';
 
 // Import Style
 import styles from './Lane.css';
+import { FiX } from "react-icons/fi";
 
-class Lane extends Component {
-  render() {
-    return (
-    );
-  }
+const Lane = props => {
+  const { lane, laneNotes, updateLane, editLane, deleteLane, addNote } = props;
+  const laneId = lane.id;
+
+  return (
+    <div className={styles.Lane}>
+      <div className={styles.LaneHeader}>
+        <Edit
+          className={styles.LaneName}
+          editing={lane.editing ? lane.editing : false}
+          value={lane.name}
+          onValueClick={() => editLane(laneId)}
+          onUpdate={name => updateLane({ ...lane, name, editing: false })}
+        />
+        <div className={styles.LaneDelete}>
+          <button onClick={() => deleteLane(laneId)}><FiX /></button>
+        </div>
+      </div>
+      <Notes
+        notes={laneNotes}
+        laneId={laneId}
+        addNote={addNote}
+      />
+    </div>
+  );
 }
 
-const mapStateToProps = (state) => {
-  return {};
-};
+/*
 
-const mapDispatchToProps = (dispatch) => {
-  return {};
-};
+ */
 
 Lane.propTypes = {
+  lane: PropTypes.object,
+  laneNotes: PropTypes.array,
+  updateLane: PropTypes.func,
+  editLane: PropTypes.func,
+  deleteLane: PropTypes.func,
+  addNote: PropTypes.func,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Lane);
+export default Lane;

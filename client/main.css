@@ -29,6 +29,19 @@ input:-moz-placeholder {
 
 body {
 	background: #FFF;
-	font-family: 'Lato', sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 16px;
 }
+
+.btn {
+	position: absolute;	
+	margin-top: -40px;	
+	border: 0;
+	background-color: rgba(0,0,0,0);
+	color: #a6a6a6;
+	cursor: pointer;
+  }
+  
+  .btn:hover, btn:active {
+	color: #333333;
+  }

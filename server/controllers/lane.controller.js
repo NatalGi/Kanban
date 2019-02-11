@@ -53,7 +53,7 @@ export function deleteLane(req, res) {
 }
 
 export function updateLane(req, res) {
-  const { laneId, newName } = req.body;
+  const { id: laneId, name: newName } = req.body;
   if(!laneId || !newName) {
     res.status(400).end();
   }

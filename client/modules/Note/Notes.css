@@ -1,0 +1,11 @@
+.Notes .AddNote button {
+  padding: 5px 15px;
+  border: 0;
+  margin-top: 10px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: #a6a6a6;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+}
