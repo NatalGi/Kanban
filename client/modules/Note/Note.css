@@ -16,6 +16,14 @@
   background-color: #ff944d;
 }
 
+.NoteDragHover {
+  background-color: #a6a6a6;
+}
+
+.NoteIsDragging {
+  cursor: -webkit-grabbing;
+}
+
 .NoteDelete button {
   position: absolute;
   top: 5px;

@@ -8,10 +8,10 @@ import styles from './Lane.css';
 import { FiX } from "react-icons/fi";
 
 const Lane = props => {
-  const { lane, laneNotes, updateLane, editLane, deleteLane, addNote } = props;
+  const {connectDropTarget, lane, laneNotes, updateLane, editLane, deleteLane, addNote } = props;
   const laneId = lane.id;
 
-  return (
+  return connectDropTarget(
     <div className={styles.Lane}>
       <div className={styles.LaneHeader}>
         <Edit
@@ -39,6 +39,7 @@ const Lane = props => {
  */
 
 Lane.propTypes = {
+  connectDropTarget: PropTypes.func,
   lane: PropTypes.object,
   laneNotes: PropTypes.array,
   updateLane: PropTypes.func,

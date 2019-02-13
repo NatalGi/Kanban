@@ -8,6 +8,7 @@ const mapDispatchToProps = {
   ...noteActions,
   updateNote: noteActions.updateNoteRequest,
   deleteNote: noteActions.deleteNoteRequest,
+  moveWithinLane: noteActions.moveWithinLaneRequest,
 };
 
 export default connect(
